@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="ja">
+<head><title>
+Problem A: Hanafuda Shuffle
+</title>
+<link rel="stylesheet" href="sel.css"></head>
+
+<body>
+<p align="right"><i>
+ACM International Collegiate Programming Contest<br>
+Japan Domestic, 2004-07-02<br>
+</i></p><hr>
+
+<h1 align="center">Problem A<br>
+<U>Hanafuda Shuffle</U></h1>
+
+<div class="jp">
+<p>
+カードの山を混ぜて切る方法はいろいろとある．
+日本のカード遊びである「花札」における花札混ぜ切りは，札を切る方法の一つ
+である．
+以下に，花札混ぜ切りの方法を示す．
+</p>
+</div>
+
+<div class="jp">
+<p>
+<I>n</I>枚のカードの山がある．図1に示すように，山の一番上から<I>p</I>枚
+目の札から連続した<I>c</I>枚の札を抜き取り，それをそのまま山の上に置く．
+この操作(カット操作という)を繰り返し行う．
+</p>
+</div>
+
+<div class="jp">
+<p>
+花札混ぜ切りをシミュレートし，最終的に山の一番上にくる札を答える
+プログラムを書きなさい．
+</p>
+</div>
+
+<center>
+<table>
+<tr>
+  <td ALIGN="center"><img SRC="./A.gif"></td>
+</tr>
+<tr>
+  <td ALIGN="center">Figure 1: Cutting operation</td>
+
+</tr>
+</table>
+</center>
+
+<h2>Input</h2>
+
+<div class="jp">
+<p>
+入力は複数のデータセットから構成される．各データセットは<I>n</I>と<I>r</I>
+という二つの正の整数を含む行から始まる．ただし，<I>n</I>は 1 &lt;= 
+<I>n</I> &lt;= 50であり，<I>r</I>は1 &lt;= <I>r</I> &lt;= 50である．
+<I>n</I>と<I>r</I>はそれぞれ山にある札の枚数とカット操作の回数を表す．
+</p>
+</div>
+
+<div class="jp">
+<p>
+データセットはさらに<I>r</I>行続く．その各行は1回のカット操作を表して
+おり，これらの操作は順に実行される．
+各行は<I>p</I>と<I>c</I>の二つの正の整数を含む．
+ただし，<I>p</I>と<I>c</I>は <I>p</I> + <I>c</I> &lt;= <I>n</I> + 1を
+満足している．
+札の山の一番上から<I>p</I>枚目の札から，<I>c</I>枚の札を山から抜
+き取り，その山の一番上に置く．
+</p>
+</div>
+
+<div class="jp">
+<p>
+入力の終わりは0を二つ含む行によって表される．
+</p>
+</div>
+
+<div class="jp">
+<p>
+各入力行は一つの空白で区切られた二つの整数を含む．行内にその他の文字は
+ない．
+</div>
+
+<h2>Output</h2>
+<div class="jp">
+<p>
+入力の各データセットに対して，最初に一番下を1番として順に<I>n</I>番まで
+の札が積み上げられた山を仮定して，山を混ぜて切り終わったとき，山の一番
+上にある札の番号を出力しなさい．ただし，番号は前後に空白のような余分な文字
+を含まないこと．
+</p>
+</div>
+
+<h2>Sample Input</h2>
+<pre>
+5 2
+3 1
+3 1
+10 3
+1 10
+10 1
+8 3
+0 0
+</pre>
+
+<h2>Output for the Sample Input</h2>
+<pre>
+4
+4
+</pre>
+
+<h2>First Input Data</h2>
+<div class="jp">
+<p>
+ここに<a href="../A/input/A1">1番目のデータ
+</a>がある．
+</p>
+</div>
+
+<hr>
+<p align="right">
+<i>The ACM ICPC</i></p>
+</body></html>
