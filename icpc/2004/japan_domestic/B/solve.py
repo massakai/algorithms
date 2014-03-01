@@ -19,6 +19,7 @@ class Solver(object):
         u"""問題を解く。"""
         if self.dataset[y][x] == self.RED:
             return 0
+        # 探索済みの印としてREDにする
         # self.dataset[y][x] = self.RED （文字列の変更はできないため）
         self.dataset[y] = self.dataset[y][:x] + self.RED + self.dataset[y][x+1:]
         
