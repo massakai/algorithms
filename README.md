@@ -14,6 +14,7 @@ ACM International Collegeate Programming Contest
 
 * 2004
     * [国内予選](http://www.ehime-u.ac.jp/ICPC/problems/domestic/d2004/)
+        * [Problem A Hanafuda Shuffle](icpc/2004_japan_domestic/A.py)
 * 2013
     * [国内予選](http://sparth.u-aizu.ac.jp/icpc2013/d_problems.php)
         * [Problem A Integral Rectangles](icpc/2013_japan_domestic/A.py)
