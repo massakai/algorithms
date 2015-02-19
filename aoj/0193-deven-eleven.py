@@ -39,16 +39,16 @@ while True:
     s = int(sys.stdin.readline())
     stores = []
     for i in range(s):
-        cord = [int(j) for j in sys.stdin.readline().split()]
-        stores.append(tuple(cord))
+        pos = [int(j) for j in sys.stdin.readline().split()]
+        stores.append(tuple(pos))
     hex_map = {}
     update_map(hex_map, stores)
 
     t = int(sys.stdin.readline())
     candidates = []
     for i in range(t):
-        cord = [int(j) for j in sys.stdin.readline().split()]
-        candidates.append(tuple(cord))
+        pos = [int(j) for j in sys.stdin.readline().split()]
+        candidates.append(tuple(pos))
 
     # search max num
     max_num_blocks = 0
