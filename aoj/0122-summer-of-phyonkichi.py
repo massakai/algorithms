@@ -1,19 +1,10 @@
 import sys
 
 def generate_frog_positions(x, y):
-    positions = []
-    positions.append((x - 1, y - 2))
-    positions.append((x, y - 2))
-    positions.append((x + 1, y - 2))
-    positions.append((x + 2, y - 1))
-    positions.append((x + 2, y))
-    positions.append((x + 2, y + 1))
-    positions.append((x - 1, y + 2))
-    positions.append((x, y + 2))
-    positions.append((x + 1, y + 2))
-    positions.append((x - 2, y - 1))
-    positions.append((x - 2, y))
-    positions.append((x - 2, y + 1))
+    positions = [(x - 1, y - 2), (x, y - 2), (x + 1, y - 2),
+                 (x + 2, y - 1), (x + 2, y), (x + 2, y + 1),
+                 (x - 1, y + 2), (x, y + 2), (x + 1, y + 2),
+                 (x - 2, y - 1), (x - 2, y), (x - 2, y + 1)]
     return [(a, b) for (a, b) in positions if 0 <= a <= 9 and 0 <= b <= 9]
 
 def is_near_sprinkler(frog, sprinkler):
