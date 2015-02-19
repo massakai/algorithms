@@ -6,7 +6,6 @@ def generate_next_hexes(x, y):
         hexes += [(x - 1, y - 1), (x - 1, y + 1)]
     else:
         hexes += [(x + 1, y - 1), (x + 1, y + 1)]
-    hexes = [(a, b) for (a, b) in hexes if 1 <= b <= m and 1 <= b <= n]
     return hexes
 
 def update_map(hex_map, hexes):
@@ -15,10 +14,13 @@ def update_map(hex_map, hexes):
     while hexes:
         next_hexes = []
         for pos in hexes:
-            if pos not in hex_map or distance < hex_map[pos]):
+            x = pos[0]
+            y = pos[1]
+            if (1 <= x <= m and 1 <= y <= n
+                    and (pos not in hex_map or distance < hex_map[pos])):
                 hex_map[pos] = distance
                 num_updated_hexes += 1
-                next_hexes += generate_next_hexes(pos[0], pos[1])
+                next_hexes += generate_next_hexes(x, y)
         distance += 1
         hexes = next_hexes
     return num_updated_hexes
