@@ -1,17 +1,11 @@
 import sys
 
 def generate_next_hexes(x, y):
-    hexes = list()
-    hexes.append((x, y - 1))
-    hexes.append((x, y + 1))
-    hexes.append((x - 1, y))
-    hexes.append((x + 1, y))
+    hexes = [(x, y - 1), (x, y + 1), (x - 1, y), (x + 1, y)]
     if y % 2:
-        hexes.append((x - 1, y - 1))
-        hexes.append((x - 1, y + 1))
+        hexes += [(x - 1, y - 1), (x - 1, y + 1)]
     else:
-        hexes.append((x + 1, y - 1))
-        hexes.append((x + 1, y + 1))
+        hexes += [(x + 1, y - 1), (x + 1, y + 1)]
     return hexes
 
 def update_map(hex_map, hexes):
@@ -50,7 +44,6 @@ while True:
         pos = [int(j) for j in sys.stdin.readline().split()]
         candidates.append(tuple(pos))
 
-    # search max num
     max_num_blocks = 0
     for candidate in candidates:
         new_hex_map = hex_map.copy()
